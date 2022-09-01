@@ -42,7 +42,7 @@ export function randomQuote() {
 
 export function getAuthorQuotes(authorName) {
   return async function (dispatch) {
-    const json = await axios.get(`/quotes/authors/${authorName}`);
+    const json = await axios.get(`quotes/authors/${authorName}`);
     return dispatch({
       type: "GET_AUTHOR_QUOTES",
       payload: json.data,
