@@ -1,0 +1,16 @@
+.container {
+  height: 100px;
+  width: 100%;
+  background-color: white;
+  display: flex; 
+  top: 0;
+  border-bottom: 1px black;
+  border-color: black;
+  margin-bottom: 5rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
