@@ -46,8 +46,8 @@ const Quotes = () => {
           {allQuotes[0]?.quote ? (
             allQuotes.map((e) => {
               return (
-                <div className="card">
-                  <p className="quote">{e.quote}</p>
+                <div key={e.id} className="card">
+                  <p  className="quote">{e.quote}</p>
                   <p className="author">{e.author}</p>
                   <button className="copy" onClick={() => copyText(`${e.quote} ~${e.author}`)}>
                     <RiFileCopyLine />

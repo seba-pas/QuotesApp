@@ -1,9 +1,8 @@
 import axios from "axios";
-const BASE_URL = "http://localhost:3001/quotes";
 
 export function getAllQuotes(page) {
   return async function (dispatch) {
-    const json = await axios.get(`http://localhost:3001/quotes?page=${page}`);
+    const json = await axios.get(`/quotes?page=${page}`);
     return dispatch({
       type: "GET_ALL_QUOTES",
       payload: json.data,
@@ -13,7 +12,7 @@ export function getAllQuotes(page) {
 
 export function getGenreQuotes(genre) {
   return async function (dispatch) {
-    const json = await axios.get(`${BASE_URL}/genres/${genre}`);
+    const json = await axios.get(`/quotes/genres/${genre}`);
     return dispatch({
       type: "GET_GENRE_QUOTES",
       payload: json.data,
@@ -23,7 +22,7 @@ export function getGenreQuotes(genre) {
 
 export function searchQuotes(searchKeyword) {
   return async function (dispatch) {
-    const json = await axios.get(`${BASE_URL}/search/${searchKeyword}`);
+    const json = await axios.get(`/quotes/search/${searchKeyword}`);
     return dispatch({
       type: "SEARCH_QUOTES",
       payload: json.data,
@@ -33,7 +32,7 @@ export function searchQuotes(searchKeyword) {
 
 export function randomQuote() {
   return async function (dispatch) {
-    const json = await axios.get(`${BASE_URL}/random`); 
+    const json = await axios.get(`/quotes/random`);
     return dispatch({
       type: "GET_RANDOM_QUOTE",
       payload: json.data,
@@ -43,7 +42,7 @@ export function randomQuote() {
 
 export function getAuthorQuotes(authorName) {
   return async function (dispatch) {
-    const json = await axios.get(`${BASE_URL}/authors/${authorName}`);
+    const json = await axios.get(`/quotes/authors/${authorName}`);
     return dispatch({
       type: "GET_AUTHOR_QUOTES",
       payload: json.data,
