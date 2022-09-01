@@ -19,7 +19,7 @@ async function getAllQuotes(page) {
         genre: e.quoteGenre,
       };
     });
-    console.log(mapeo);
+  
     return mapeo;
   } catch (error) {
     console.log("error in controller", error);

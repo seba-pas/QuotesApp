@@ -26,6 +26,7 @@ router.get("/", async (req, res) => {
 router.get("/random", async (req, res) => {
   try {
     const quote = await randomQuote();
+    console.log(quote)
     res.status(200).json(quote);
   } catch (error) {
     res.status(400).send("error en la ruta de random ", error);

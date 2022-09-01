@@ -1,6 +1,6 @@
 const initialState = {
   quotes: [],
-  quote: {},
+  quote: [],
   genreQuotes: [],
   authorQuotes: [],
   searchQuotes: [],
