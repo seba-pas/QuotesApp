@@ -93,6 +93,26 @@
 
 }
 
+
+.spinner_random {
+ position:relative;
+ height: 30vh;
+ margin: 6rem;
+ margin-left: 6rem;
+ margin-bottom: 2rem;
+// padding: 3rem;
+}
+
+.copy_random {
+  background: transparent;
+  border-color: black;
+  border-radius: 10px;
+  border: 0.2px;
+  margin-left: 75%;
+  margin-bottom: 4rem;
+  color: rgba(0, 0, 0, 0.335);
+ }
+
 //   font-size: 36px;
 //   font-weight: 500;
 //   line-height: 43px;
